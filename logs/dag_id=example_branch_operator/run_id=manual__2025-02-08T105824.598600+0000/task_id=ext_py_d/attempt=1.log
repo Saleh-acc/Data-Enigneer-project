@@ -1,0 +1,30 @@
+[2025-02-08T10:58:34.202+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-08T10:58:34.221+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_branch_operator.ext_py_d manual__2025-02-08T10:58:24.598600+00:00 [queued]>
+[2025-02-08T10:58:34.232+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_branch_operator.ext_py_d manual__2025-02-08T10:58:24.598600+00:00 [queued]>
+[2025-02-08T10:58:34.232+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-02-08T10:58:34.245+0000] {taskinstance.py:2888} INFO - Executing <Task(ExternalPythonOperator): ext_py_d> on 2025-02-08 10:58:24.598600+00:00
+[2025-02-08T10:58:34.253+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'example_branch_operator', 'ext_py_d', 'manual__2025-02-08T10:58:24.598600+00:00', '--job-id', '10', '--raw', '--subdir', '/home/***/.local/lib/python3.12/site-packages/***/example_dags/example_branch_operator.py', '--cfg-path', '/tmp/tmpw2xfyu9t']
+[2025-02-08T10:58:34.255+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask ext_py_d
+[2025-02-08T10:58:34.257+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=4503) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-08T10:58:34.258+0000] {standard_task_runner.py:72} INFO - Started process 4505 to run task
+[2025-02-08T10:58:34.295+0000] {task_command.py:467} INFO - Running <TaskInstance: example_branch_operator.ext_py_d manual__2025-02-08T10:58:24.598600+00:00 [running]> on host d1b449c2efe4
+[2025-02-08T10:58:34.361+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_branch_operator' AIRFLOW_CTX_TASK_ID='ext_py_d' AIRFLOW_CTX_EXECUTION_DATE='2025-02-08T10:58:24.598600+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-08T10:58:24.598600+00:00'
+[2025-02-08T10:58:34.363+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-08T10:58:34.363+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-08T10:58:34.364+0000] {logging_mixin.py:190} INFO - Current task name:ext_py_d state:running start_date:2025-02-08 10:58:34.222324+00:00
+[2025-02-08T10:58:34.364+0000] {logging_mixin.py:190} INFO - Dag name:example_branch_operator and current dag run status:running
+[2025-02-08T10:58:34.364+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-08T10:58:34.705+0000] {baseoperator.py:405} WARNING - ExternalPythonOperator.execute cannot be called outside TaskInstance!
+[2025-02-08T10:58:34.743+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python /tmp/venv-call8_opv1lj/script.py /tmp/venv-call8_opv1lj/script.in /tmp/venv-call8_opv1lj/script.out /tmp/venv-call8_opv1lj/string_args.txt /tmp/venv-call8_opv1lj/termination.log
+[2025-02-08T10:58:34.744+0000] {process_utils.py:190} INFO - Output:
+[2025-02-08T10:58:37.190+0000] {process_utils.py:194} INFO - Hello World from external Python
+[2025-02-08T10:58:37.503+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-08T10:58:37.510+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-08T10:58:37.511+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=example_branch_operator, task_id=ext_py_d, run_id=manual__2025-02-08T10:58:24.598600+00:00, execution_date=20250208T105824, start_date=20250208T105834, end_date=20250208T105837
+[2025-02-08T10:58:37.518+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-08T10:58:37.518+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-08T10:58:37.519+0000] {logging_mixin.py:190} INFO - Dag name:example_branch_operator queued_at:2025-02-08 10:58:24.622215+00:00
+[2025-02-08T10:58:37.519+0000] {logging_mixin.py:190} INFO - Task hostname:d1b449c2efe4 operator:ExternalPythonOperator
+[2025-02-08T10:58:37.549+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-08T10:58:37.568+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-08T10:58:37.571+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

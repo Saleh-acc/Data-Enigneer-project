@@ -1,0 +1,25 @@
+[2025-02-09T19:59:36.794+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T19:59:36.949+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dimension_batch_ingestion.ingest_branch_dim manual__2025-02-09T19:59:36.069955+00:00 [queued]>
+[2025-02-09T19:59:36.957+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dimension_batch_ingestion.ingest_branch_dim manual__2025-02-09T19:59:36.069955+00:00 [queued]>
+[2025-02-09T19:59:36.958+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-02-09T19:59:36.971+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): ingest_branch_dim> on 2025-02-09 19:59:36.069955+00:00
+[2025-02-09T19:59:36.978+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=991) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-09T19:59:36.979+0000] {standard_task_runner.py:72} INFO - Started process 994 to run task
+[2025-02-09T19:59:36.978+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dimension_batch_ingestion', 'ingest_branch_dim', 'manual__2025-02-09T19:59:36.069955+00:00', '--job-id', '951', '--raw', '--subdir', 'DAGS_FOLDER/loader_dag.py', '--cfg-path', '/tmp/tmp_6n5nk0b']
+[2025-02-09T19:59:36.980+0000] {standard_task_runner.py:105} INFO - Job 951: Subtask ingest_branch_dim
+[2025-02-09T19:59:37.024+0000] {task_command.py:467} INFO - Running <TaskInstance: dimension_batch_ingestion.ingest_branch_dim manual__2025-02-09T19:59:36.069955+00:00 [running]> on host a541c7aa2e43
+[2025-02-09T19:59:37.100+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Saleh' AIRFLOW_CTX_DAG_ID='dimension_batch_ingestion' AIRFLOW_CTX_TASK_ID='ingest_branch_dim' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T19:59:36.069955+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T19:59:36.069955+00:00'
+[2025-02-09T19:59:37.100+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T19:59:37.114+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-02-09T19:59:37.115+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'curl -X POST -F file=@/opt/***/branch_dim_large_data.csv -H "Content-Type: multipart/form-data" "http://pinot-controller:9000/ingestFromFile?tableNameWithType=branch_dim_OFFLINE&batchConfigMapStr=%7B%22inputFormat%22%3A%22csv%22%2C%22recordReader.prop.delimiter%22%3A%22%2C%22%7D"']
+[2025-02-09T19:59:37.123+0000] {subprocess.py:86} INFO - Output:
+[2025-02-09T19:59:37.129+0000] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-02-09T19:59:37.130+0000] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-02-09T19:59:38.174+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  4037  100   107  100  3930    102   3763  0:00:01  0:00:01 --:--:--  3866100  4037  100   107  100  3930    102   3763  0:00:01  0:00:01 --:--:--  3866
+[2025-02-09T19:59:38.175+0000] {subprocess.py:93} INFO - {"status":"Successfully ingested file into table: branch_dim_OFFLINE as segment: branch_dim_1739131177196"}
+[2025-02-09T19:59:38.175+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-02-09T19:59:38.201+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T19:59:38.201+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dimension_batch_ingestion, task_id=ingest_branch_dim, run_id=manual__2025-02-09T19:59:36.069955+00:00, execution_date=20250209T195936, start_date=20250209T195936, end_date=20250209T195938
+[2025-02-09T19:59:38.237+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T19:59:38.254+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T19:59:38.256+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,38 @@
+[2025-02-08T19:03:34.542+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-08T19:03:34.557+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: branch_dim_gen.generate_branch_dim_data scheduled__2025-02-01T00:00:00+00:00 [queued]>
+[2025-02-08T19:03:34.565+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: branch_dim_gen.generate_branch_dim_data scheduled__2025-02-01T00:00:00+00:00 [queued]>
+[2025-02-08T19:03:34.566+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-02-08T19:03:34.580+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): generate_branch_dim_data> on 2025-02-01 00:00:00+00:00
+[2025-02-08T19:03:34.589+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=2277) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-08T19:03:34.588+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'branch_dim_gen', 'generate_branch_dim_data', 'scheduled__2025-02-01T00:00:00+00:00', '--job-id', '420', '--raw', '--subdir', 'DAGS_FOLDER/brnach_dim_gen.py', '--cfg-path', '/tmp/tmpyrgdpht6']
+[2025-02-08T19:03:34.590+0000] {standard_task_runner.py:72} INFO - Started process 2289 to run task
+[2025-02-08T19:03:34.590+0000] {standard_task_runner.py:105} INFO - Job 420: Subtask generate_branch_dim_data
+[2025-02-08T19:03:34.630+0000] {task_command.py:467} INFO - Running <TaskInstance: branch_dim_gen.generate_branch_dim_data scheduled__2025-02-01T00:00:00+00:00 [running]> on host 2c1cd59afcc0
+[2025-02-08T19:03:34.699+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Saleh' AIRFLOW_CTX_DAG_ID='branch_dim_gen' AIRFLOW_CTX_TASK_ID='generate_branch_dim_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-01T00:00:00+00:00'
+[2025-02-08T19:03:34.700+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-08T19:03:34.720+0000] {logging_mixin.py:190} INFO - CSV file './branch_dim_large_data.csv' with 50 rows has been generated successfully.
+[2025-02-08T19:03:34.721+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-08T19:03:34.728+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-08T19:03:34.728+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=branch_dim_gen, task_id=generate_branch_dim_data, run_id=scheduled__2025-02-01T00:00:00+00:00, execution_date=20250201T000000, start_date=20250208T190334, end_date=20250208T190334
+[2025-02-08T19:03:34.764+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-08T19:03:34.778+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-08T19:03:34.780+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-08T20:42:39.687+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-08T20:42:39.702+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: branch_dim_gen.generate_branch_dim_data scheduled__2025-02-01T00:00:00+00:00 [queued]>
+[2025-02-08T20:42:39.709+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: branch_dim_gen.generate_branch_dim_data scheduled__2025-02-01T00:00:00+00:00 [queued]>
+[2025-02-08T20:42:39.710+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-02-08T20:42:39.721+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): generate_branch_dim_data> on 2025-02-01 00:00:00+00:00
+[2025-02-08T20:42:39.728+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'branch_dim_gen', 'generate_branch_dim_data', 'scheduled__2025-02-01T00:00:00+00:00', '--job-id', '389', '--raw', '--subdir', 'DAGS_FOLDER/brnach_dim_gen.py', '--cfg-path', '/tmp/tmp7yfxsoz0']
+[2025-02-08T20:42:39.731+0000] {standard_task_runner.py:105} INFO - Job 389: Subtask generate_branch_dim_data
+[2025-02-08T20:42:39.731+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=311) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-08T20:42:39.732+0000] {standard_task_runner.py:72} INFO - Started process 314 to run task
+[2025-02-08T20:42:39.767+0000] {task_command.py:467} INFO - Running <TaskInstance: branch_dim_gen.generate_branch_dim_data scheduled__2025-02-01T00:00:00+00:00 [running]> on host 86932746817d
+[2025-02-08T20:42:39.826+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Saleh' AIRFLOW_CTX_DAG_ID='branch_dim_gen' AIRFLOW_CTX_TASK_ID='generate_branch_dim_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-01T00:00:00+00:00'
+[2025-02-08T20:42:39.827+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-08T20:42:39.842+0000] {logging_mixin.py:190} INFO - CSV file './branch_dim_large_data.csv' with 50 rows has been generated successfully.
+[2025-02-08T20:42:39.842+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-08T20:42:39.849+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-08T20:42:39.850+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=branch_dim_gen, task_id=generate_branch_dim_data, run_id=scheduled__2025-02-01T00:00:00+00:00, execution_date=20250201T000000, start_date=20250208T204239, end_date=20250208T204239
+[2025-02-08T20:42:39.906+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-08T20:42:39.923+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-08T20:42:39.933+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

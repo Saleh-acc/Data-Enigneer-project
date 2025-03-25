@@ -1,0 +1,57 @@
+[2025-02-08T19:02:43.348+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-08T19:02:43.375+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_dim_generator.generate_customer_dim_data scheduled__2024-11-30T00:00:00+00:00 [queued]>
+[2025-02-08T19:02:43.399+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_dim_generator.generate_customer_dim_data scheduled__2024-11-30T00:00:00+00:00 [queued]>
+[2025-02-08T19:02:43.400+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-02-08T19:02:43.537+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): generate_customer_dim_data> on 2024-11-30 00:00:00+00:00
+[2025-02-08T19:02:43.547+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1616) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-08T19:02:43.547+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'customer_dim_generator', 'generate_customer_dim_data', 'scheduled__2024-11-30T00:00:00+00:00', '--job-id', '265', '--raw', '--subdir', 'DAGS_FOLDER/customer_dim_gen.py', '--cfg-path', '/tmp/tmpowdvet2d']
+[2025-02-08T19:02:43.549+0000] {standard_task_runner.py:72} INFO - Started process 1651 to run task
+[2025-02-08T19:02:43.549+0000] {standard_task_runner.py:105} INFO - Job 265: Subtask generate_customer_dim_data
+[2025-02-08T19:02:43.611+0000] {task_command.py:467} INFO - Running <TaskInstance: customer_dim_generator.generate_customer_dim_data scheduled__2024-11-30T00:00:00+00:00 [running]> on host 2c1cd59afcc0
+[2025-02-08T19:02:43.704+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Saleh' AIRFLOW_CTX_DAG_ID='customer_dim_generator' AIRFLOW_CTX_TASK_ID='generate_customer_dim_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-30T00:00:00+00:00'
+[2025-02-08T19:02:43.705+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-08T19:02:43.732+0000] {logging_mixin.py:190} INFO - CSV file './customer_dim_large_data.csv' with 100 rows has been generated successfully.
+[2025-02-08T19:02:43.733+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-08T19:02:43.744+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-08T19:02:43.745+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=customer_dim_generator, task_id=generate_customer_dim_data, run_id=scheduled__2024-11-30T00:00:00+00:00, execution_date=20241130T000000, start_date=20250208T190243, end_date=20250208T190243
+[2025-02-08T19:02:43.770+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-08T19:02:43.794+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-08T19:02:43.798+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-08T20:40:23.674+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-08T20:40:23.699+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_dim_generator.generate_customer_dim_data scheduled__2024-11-30T00:00:00+00:00 [queued]>
+[2025-02-08T20:40:23.723+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_dim_generator.generate_customer_dim_data scheduled__2024-11-30T00:00:00+00:00 [queued]>
+[2025-02-08T20:40:23.725+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-02-08T20:40:23.746+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): generate_customer_dim_data> on 2024-11-30 00:00:00+00:00
+[2025-02-08T20:40:23.758+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1259) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-08T20:40:23.759+0000] {standard_task_runner.py:72} INFO - Started process 1286 to run task
+[2025-02-08T20:40:23.760+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'customer_dim_generator', 'generate_customer_dim_data', 'scheduled__2024-11-30T00:00:00+00:00', '--job-id', '164', '--raw', '--subdir', 'DAGS_FOLDER/customer_dim_gen.py', '--cfg-path', '/tmp/tmphsbd_5e0']
+[2025-02-08T20:40:23.762+0000] {standard_task_runner.py:105} INFO - Job 164: Subtask generate_customer_dim_data
+[2025-02-08T20:40:23.820+0000] {task_command.py:467} INFO - Running <TaskInstance: customer_dim_generator.generate_customer_dim_data scheduled__2024-11-30T00:00:00+00:00 [running]> on host 7e959c1a2a8b
+[2025-02-08T20:40:23.928+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Saleh' AIRFLOW_CTX_DAG_ID='customer_dim_generator' AIRFLOW_CTX_TASK_ID='generate_customer_dim_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-30T00:00:00+00:00'
+[2025-02-08T20:40:23.929+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-08T20:40:23.948+0000] {logging_mixin.py:190} INFO - CSV file './customer_dim_large_data.csv' with 100 rows has been generated successfully.
+[2025-02-08T20:40:23.949+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-08T20:40:23.958+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-08T20:40:23.959+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=customer_dim_generator, task_id=generate_customer_dim_data, run_id=scheduled__2024-11-30T00:00:00+00:00, execution_date=20241130T000000, start_date=20250208T204023, end_date=20250208T204023
+[2025-02-08T20:40:24.015+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-08T20:40:24.031+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-08T20:40:24.034+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-08T20:43:12.650+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-08T20:43:12.664+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_dim_generator.generate_customer_dim_data scheduled__2024-11-30T00:00:00+00:00 [queued]>
+[2025-02-08T20:43:12.671+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_dim_generator.generate_customer_dim_data scheduled__2024-11-30T00:00:00+00:00 [queued]>
+[2025-02-08T20:43:12.672+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-02-08T20:43:12.684+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): generate_customer_dim_data> on 2024-11-30 00:00:00+00:00
+[2025-02-08T20:43:12.692+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=611) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-08T20:43:12.693+0000] {standard_task_runner.py:72} INFO - Started process 625 to run task
+[2025-02-08T20:43:12.692+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'customer_dim_generator', 'generate_customer_dim_data', 'scheduled__2024-11-30T00:00:00+00:00', '--job-id', '459', '--raw', '--subdir', 'DAGS_FOLDER/customer_dim_gen.py', '--cfg-path', '/tmp/tmphuprvt6u']
+[2025-02-08T20:43:12.694+0000] {standard_task_runner.py:105} INFO - Job 459: Subtask generate_customer_dim_data
+[2025-02-08T20:43:12.731+0000] {task_command.py:467} INFO - Running <TaskInstance: customer_dim_generator.generate_customer_dim_data scheduled__2024-11-30T00:00:00+00:00 [running]> on host 86932746817d
+[2025-02-08T20:43:12.800+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Saleh' AIRFLOW_CTX_DAG_ID='customer_dim_generator' AIRFLOW_CTX_TASK_ID='generate_customer_dim_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-30T00:00:00+00:00'
+[2025-02-08T20:43:12.801+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-08T20:43:12.817+0000] {logging_mixin.py:190} INFO - CSV file './customer_dim_large_data.csv' with 100 rows has been generated successfully.
+[2025-02-08T20:43:12.818+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-08T20:43:12.825+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-08T20:43:12.825+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=customer_dim_generator, task_id=generate_customer_dim_data, run_id=scheduled__2024-11-30T00:00:00+00:00, execution_date=20241130T000000, start_date=20250208T204312, end_date=20250208T204312
+[2025-02-08T20:43:12.868+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-08T20:43:12.881+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-08T20:43:12.883+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

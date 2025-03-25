@@ -1,0 +1,18 @@
+[2025-02-09T20:21:54.647+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T20:21:54.663+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: account_dim_gen.generate_account_dim_data scheduled__2025-02-09T00:40:50+00:00 [queued]>
+[2025-02-09T20:21:54.672+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: account_dim_gen.generate_account_dim_data scheduled__2025-02-09T00:40:50+00:00 [queued]>
+[2025-02-09T20:21:54.673+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-02-09T20:21:54.708+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): generate_account_dim_data> on 2025-02-09 00:40:50+00:00
+[2025-02-09T20:21:54.716+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=4011) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-09T20:21:54.717+0000] {standard_task_runner.py:72} INFO - Started process 4027 to run task
+[2025-02-09T20:21:54.716+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'account_dim_gen', 'generate_account_dim_data', 'scheduled__2025-02-09T00:40:50+00:00', '--job-id', '1198', '--raw', '--subdir', 'DAGS_FOLDER/account_dim_gen.py', '--cfg-path', '/tmp/tmpce2owbpu']
+[2025-02-09T20:21:54.718+0000] {standard_task_runner.py:105} INFO - Job 1198: Subtask generate_account_dim_data
+[2025-02-09T20:21:54.761+0000] {task_command.py:467} INFO - Running <TaskInstance: account_dim_gen.generate_account_dim_data scheduled__2025-02-09T00:40:50+00:00 [running]> on host a541c7aa2e43
+[2025-02-09T20:21:54.833+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Saleh' AIRFLOW_CTX_DAG_ID='account_dim_gen' AIRFLOW_CTX_TASK_ID='generate_account_dim_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T00:40:50+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-09T00:40:50+00:00'
+[2025-02-09T20:21:54.834+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T20:21:54.854+0000] {logging_mixin.py:190} INFO - CSV file ./account_dim_large_data.csv with 50 row has been generated successfully!
+[2025-02-09T20:21:54.854+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-09T20:21:54.863+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T20:21:54.864+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=account_dim_gen, task_id=generate_account_dim_data, run_id=scheduled__2025-02-09T00:40:50+00:00, execution_date=20250209T004050, start_date=20250209T202154, end_date=20250209T202154
+[2025-02-09T20:21:54.892+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T20:21:54.901+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

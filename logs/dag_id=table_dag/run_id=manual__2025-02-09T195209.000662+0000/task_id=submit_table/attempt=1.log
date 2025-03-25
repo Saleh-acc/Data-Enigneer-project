@@ -1,0 +1,21 @@
+[2025-02-09T19:52:10.503+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T19:52:10.516+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: table_dag.submit_table manual__2025-02-09T19:52:09.000662+00:00 [queued]>
+[2025-02-09T19:52:10.523+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: table_dag.submit_table manual__2025-02-09T19:52:09.000662+00:00 [queued]>
+[2025-02-09T19:52:10.524+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-02-09T19:52:10.536+0000] {taskinstance.py:2888} INFO - Executing <Task(PinotTableSubmitOperator): submit_table> on 2025-02-09 19:52:09.000662+00:00
+[2025-02-09T19:52:10.544+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=256) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-09T19:52:10.545+0000] {standard_task_runner.py:72} INFO - Started process 264 to run task
+[2025-02-09T19:52:10.544+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'table_dag', 'submit_table', 'manual__2025-02-09T19:52:09.000662+00:00', '--job-id', '942', '--raw', '--subdir', 'DAGS_FOLDER/table_dag.py', '--cfg-path', '/tmp/tmp6r6r1tnt']
+[2025-02-09T19:52:10.546+0000] {standard_task_runner.py:105} INFO - Job 942: Subtask submit_table
+[2025-02-09T19:52:10.586+0000] {task_command.py:467} INFO - Running <TaskInstance: table_dag.submit_table manual__2025-02-09T19:52:09.000662+00:00 [running]> on host a541c7aa2e43
+[2025-02-09T19:52:10.670+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Saleh' AIRFLOW_CTX_DAG_ID='table_dag' AIRFLOW_CTX_TASK_ID='submit_table' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T19:52:09.000662+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T19:52:09.000662+00:00'
+[2025-02-09T19:52:10.671+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T19:52:10.901+0000] {pinot_table_operator.py:36} INFO - Table successfully submitted toApache Pinot! /opt/***/dags/tables/account_dim.json
+[2025-02-09T19:52:11.063+0000] {pinot_table_operator.py:36} INFO - Table successfully submitted toApache Pinot! /opt/***/dags/tables/branch_dim.json
+[2025-02-09T19:52:11.171+0000] {pinot_table_operator.py:36} INFO - Table successfully submitted toApache Pinot! /opt/***/dags/tables/customer_dim.json
+[2025-02-09T19:52:11.806+0000] {pinot_table_operator.py:36} INFO - Table successfully submitted toApache Pinot! /opt/***/dags/tables/transaction_facts_dim.json
+[2025-02-09T19:52:11.815+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T19:52:11.816+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=table_dag, task_id=submit_table, run_id=manual__2025-02-09T19:52:09.000662+00:00, execution_date=20250209T195209, start_date=20250209T195210, end_date=20250209T195211
+[2025-02-09T19:52:11.862+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T19:52:11.881+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T19:52:11.885+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
