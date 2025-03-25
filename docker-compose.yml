@@ -227,7 +227,8 @@ services:
 
   airflow-webserver:
     <<: *airflow-common
-    command: webserver
+    command: >
+      bash -c "pip install kafka-python-ng && airflow webserver"
     ports:
       - "8180:8080"
     healthcheck:
@@ -247,7 +248,7 @@ services:
 
   airflow-scheduler:
     <<: *airflow-common
-    command: scheduler
+    command:  bash -c "pip install kafka-python-ng && airflow scheduler"
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
       interval: 30s
